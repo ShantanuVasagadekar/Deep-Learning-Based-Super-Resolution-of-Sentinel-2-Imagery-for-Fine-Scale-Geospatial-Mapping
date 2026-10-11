@@ -1,0 +1,31 @@
+{
+  "source": "OpenEarthMap examples; original satellite RGB supplied by Maxar/xBD",
+  "license": "CC BY-NC-SA 4.0",
+  "attribution_url": "https://open-earth-map.org/attribution.html",
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "authors": "Junshi Xia, Naoto Yokoya, Bruno Adriano, Clifford Broni-Bediako; Maxar/xBD image providers",
+  "validation_note": "Upstream demo samples, possibly used in upstream train/validation. Regression and in-domain sanity checks only; NOT independent held-out accuracy.",
+  "label_ids": "0 ignored; 1 bareland; 2 rangeland; 3 developed space; 4 road; 5 tree; 6 water; 7 agriculture; 8 building",
+  "files": [
+    {
+      "file": "images/houston_16.tif",
+      "sha256": "6b853a861de16ec5afb3e565a0b5282492b45cf37c45dbd0d1c5b43d26f91612",
+      "url": "https://raw.githubusercontent.com/cliffbb/oem-lightweight/8b301688b870f0eb8a5b93337ca3bc90a28734c4/demo_data/images/houston_16.tif"
+    },
+    {
+      "file": "labels/houston_16.tif",
+      "sha256": "53651c01cd123faed8fd03e95577f71e085aee00d292af8fc88fc6ecb435dc8f",
+      "url": "https://raw.githubusercontent.com/cliffbb/oem-lightweight/8b301688b870f0eb8a5b93337ca3bc90a28734c4/demo_data/labels/houston_16.tif"
+    },
+    {
+      "file": "images/palu_8.tif",
+      "sha256": "9ea299669457fa43b84d09864ca785eafe617d82451e354e86382ab65ed3cd4c",
+      "url": "https://raw.githubusercontent.com/cliffbb/oem-lightweight/8b301688b870f0eb8a5b93337ca3bc90a28734c4/demo_data/images/palu_8.tif"
+    },
+    {
+      "file": "labels/palu_8.tif",
+      "sha256": "03e9656aaa6466b151cd4b300121d9cea69f1968a6a3d22f72bdb5c2f55fff67",
+      "url": "https://raw.githubusercontent.com/cliffbb/oem-lightweight/8b301688b870f0eb8a5b93337ca3bc90a28734c4/demo_data/labels/palu_8.tif"
+    }
+  ]
+}

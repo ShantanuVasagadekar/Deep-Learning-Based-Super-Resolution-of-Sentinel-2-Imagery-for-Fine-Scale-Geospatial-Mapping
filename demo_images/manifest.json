@@ -1,0 +1,407 @@
+[
+  {
+    "file": "sentinel2_urban_delhi_2023-12-05.tif",
+    "format": "TIFF",
+    "loaded_width": 256,
+    "loaded_height": 256,
+    "source_kind": "real Sentinel-2 L2A surface reflectance; measured B02/B03/B04/B08",
+    "valid_pixels": 65536,
+    "category": "urban",
+    "location": "Central New Delhi",
+    "center_lon": 77.209,
+    "center_lat": 28.614,
+    "acquisition_datetime": "2023-12-05T05:40:56.807000Z",
+    "platform": "sentinel-2a",
+    "stac_item_id": "S2A_43RGM_20231205_0_L2A",
+    "stac_item_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_43RGM_20231205_0_L2A",
+    "stac_metadata_file": "sources/urban_delhi.stac.json",
+    "source_assets": {
+      "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/GM/2023/12/S2A_43RGM_20231205_0_L2A/B02.tif",
+      "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/GM/2023/12/S2A_43RGM_20231205_0_L2A/B03.tif",
+      "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/GM/2023/12/S2A_43RGM_20231205_0_L2A/B04.tif",
+      "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/GM/2023/12/S2A_43RGM_20231205_0_L2A/B08.tif"
+    },
+    "scl_asset": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/GM/2023/12/S2A_43RGM_20231205_0_L2A/SCL.tif",
+    "quality_file": "quality/urban_delhi_SCL.tif",
+    "single_band_directory": "satellite_bands/urban_delhi",
+    "crs": "EPSG:32643",
+    "transform": [
+      10.0,
+      0.0,
+      714700.0,
+      0.0,
+      -10.0,
+      3168500.0
+    ],
+    "bbox_wgs84": [
+      77.19567601549362,
+      28.602277873568784,
+      77.22232656978048,
+      28.625794990958557
+    ],
+    "native_pixel_size_m": 10,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B08"
+    ],
+    "scales": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_window": {
+      "col_off": 1474,
+      "row_off": 3154,
+      "width": 256,
+      "height": 256
+    },
+    "source_dn_sha256": "8fca8e3ba9611dcec87ee94dd3be0df1109adbfbe525a6594d2aa002259bc1a4",
+    "sha256": "0fe26166b7f410305c7bc8db78ad590937559cdc0f0a9206540f6e66be088974",
+    "scene_cloud_cover_percent": 0.000186,
+    "clear_crop_percent": 100.0,
+    "downloaded_at_utc": "2026-10-06T08:55:44.372204+00:00",
+    "attribution": "Contains modified Copernicus Sentinel data (2023/2024)",
+    "license_url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+    "boa_offset_already_applied": true,
+    "original_stac_offsets": [
+      -0.1,
+      -0.1,
+      -0.1,
+      -0.1
+    ],
+    "calibration_policy": "Use STAC scale; offset zero when earthsearch:boa_offset_applied is true; otherwise STAC offset"
+  },
+  {
+    "file": "sentinel2_agriculture_punjab_2023-12-03.tif",
+    "format": "TIFF",
+    "loaded_width": 256,
+    "loaded_height": 256,
+    "source_kind": "real Sentinel-2 L2A surface reflectance; measured B02/B03/B04/B08",
+    "valid_pixels": 65536,
+    "category": "agriculture",
+    "location": "Farmland east of Ludhiana, Punjab",
+    "center_lon": 75.984,
+    "center_lat": 30.947,
+    "acquisition_datetime": "2023-12-03T05:50:19.370000Z",
+    "platform": "sentinel-2b",
+    "stac_item_id": "S2B_43REQ_20231203_0_L2A",
+    "stac_item_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_43REQ_20231203_0_L2A",
+    "stac_metadata_file": "sources/agriculture_punjab.stac.json",
+    "source_assets": {
+      "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/EQ/2023/12/S2B_43REQ_20231203_0_L2A/B02.tif",
+      "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/EQ/2023/12/S2B_43REQ_20231203_0_L2A/B03.tif",
+      "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/EQ/2023/12/S2B_43REQ_20231203_0_L2A/B04.tif",
+      "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/EQ/2023/12/S2B_43REQ_20231203_0_L2A/B08.tif"
+    },
+    "scl_asset": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/R/EQ/2023/12/S2B_43REQ_20231203_0_L2A/SCL.tif",
+    "quality_file": "quality/agriculture_punjab_SCL.tif",
+    "single_band_directory": "satellite_bands/agriculture_punjab",
+    "crs": "EPSG:32643",
+    "transform": [
+      10.0,
+      0.0,
+      592710.0,
+      0.0,
+      -10.0,
+      3425430.0
+    ],
+    "bbox_wgs84": [
+      75.97045697758686,
+      30.935409820988163,
+      75.99749070961994,
+      30.958710040969496
+    ],
+    "native_pixel_size_m": 10,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B08"
+    ],
+    "scales": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_window": {
+      "col_off": 9273,
+      "row_off": 7461,
+      "width": 256,
+      "height": 256
+    },
+    "source_dn_sha256": "6eaf27538064dd46816d4d392331e2a35c41f835e7a049f240df25d5c0bb0ba1",
+    "sha256": "921b4867b5edbd7ade28934d39ec1cfb50e412dc1f2dfc9f6b8bfddc8b092514",
+    "scene_cloud_cover_percent": 0.000302,
+    "clear_crop_percent": 100.0,
+    "downloaded_at_utc": "2026-10-06T08:55:49.151088+00:00",
+    "attribution": "Contains modified Copernicus Sentinel data (2023/2024)",
+    "license_url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+    "boa_offset_already_applied": true,
+    "original_stac_offsets": [
+      -0.1,
+      -0.1,
+      -0.1,
+      -0.1
+    ],
+    "calibration_policy": "Use STAC scale; offset zero when earthsearch:boa_offset_applied is true; otherwise STAC offset"
+  },
+  {
+    "file": "sentinel2_vegetation_western_ghats_2023-12-30.tif",
+    "format": "TIFF",
+    "loaded_width": 256,
+    "loaded_height": 256,
+    "source_kind": "real Sentinel-2 L2A surface reflectance; measured B02/B03/B04/B08",
+    "valid_pixels": 65535,
+    "category": "vegetation",
+    "location": "Western Ghats near Koyna",
+    "center_lon": 73.724,
+    "center_lat": 17.956,
+    "acquisition_datetime": "2023-12-30T05:44:11.967000Z",
+    "platform": "sentinel-2b",
+    "stac_item_id": "S2B_43QCV_20231230_0_L2A",
+    "stac_item_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_43QCV_20231230_0_L2A",
+    "stac_metadata_file": "sources/vegetation_western_ghats.stac.json",
+    "source_assets": {
+      "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CV/2023/12/S2B_43QCV_20231230_0_L2A/B02.tif",
+      "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CV/2023/12/S2B_43QCV_20231230_0_L2A/B03.tif",
+      "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CV/2023/12/S2B_43QCV_20231230_0_L2A/B04.tif",
+      "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CV/2023/12/S2B_43QCV_20231230_0_L2A/B08.tif"
+    },
+    "scl_asset": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CV/2023/12/S2B_43QCV_20231230_0_L2A/SCL.tif",
+    "quality_file": "quality/vegetation_western_ghats_SCL.tif",
+    "single_band_directory": "satellite_bands/vegetation_western_ghats",
+    "crs": "EPSG:32643",
+    "transform": [
+      10.0,
+      0.0,
+      363590.0,
+      0.0,
+      -10.0,
+      1987070.0
+    ],
+    "bbox_wgs84": [
+      73.7117670260123,
+      17.9444302408106,
+      73.73610328548246,
+      17.96772235305457
+    ],
+    "native_pixel_size_m": 10,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B08"
+    ],
+    "scales": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_window": {
+      "col_off": 6359,
+      "row_off": 1297,
+      "width": 256,
+      "height": 256
+    },
+    "source_dn_sha256": "1e95eefc5984e0c3ccb541ef54af48c1c11b82407b0e703697fb8f95fca427e3",
+    "sha256": "38b13caff62725fbacab1f56c8d673356a695bb4bdd2ef3bca9bae7f5e00ff4c",
+    "scene_cloud_cover_percent": 0.000392,
+    "clear_crop_percent": 99.998,
+    "downloaded_at_utc": "2026-10-06T08:55:54.151164+00:00",
+    "attribution": "Contains modified Copernicus Sentinel data (2023/2024)",
+    "license_url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+    "boa_offset_already_applied": true,
+    "original_stac_offsets": [
+      -0.1,
+      -0.1,
+      -0.1,
+      -0.1
+    ],
+    "calibration_policy": "Use STAC scale; offset zero when earthsearch:boa_offset_applied is true; otherwise STAC offset"
+  },
+  {
+    "file": "sentinel2_water_pavana_2024-02-28.tif",
+    "format": "TIFF",
+    "loaded_width": 256,
+    "loaded_height": 256,
+    "source_kind": "real Sentinel-2 L2A surface reflectance; measured B02/B03/B04/B08",
+    "valid_pixels": 65536,
+    "category": "water",
+    "location": "Pavana Reservoir, Maharashtra",
+    "center_lon": 73.481,
+    "center_lat": 18.67,
+    "acquisition_datetime": "2024-02-28T05:43:54.880000Z",
+    "platform": "sentinel-2b",
+    "stac_item_id": "S2B_43QCA_20240228_0_L2A",
+    "stac_item_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_43QCA_20240228_0_L2A",
+    "stac_metadata_file": "sources/water_pavana.stac.json",
+    "source_assets": {
+      "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B02.tif",
+      "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B03.tif",
+      "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B04.tif",
+      "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B08.tif"
+    },
+    "scl_asset": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/SCL.tif",
+    "quality_file": "quality/water_pavana_SCL.tif",
+    "single_band_directory": "satellite_bands/water_pavana",
+    "crs": "EPSG:32643",
+    "transform": [
+      10.0,
+      0.0,
+      338510.0,
+      0.0,
+      -10.0,
+      2066280.0
+    ],
+    "bbox_wgs84": [
+      73.46868756301957,
+      18.658388354323332,
+      73.49316061406876,
+      18.68171382132353
+    ],
+    "native_pixel_size_m": 10,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B08"
+    ],
+    "scales": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_window": {
+      "col_off": 3851,
+      "row_off": 3372,
+      "width": 256,
+      "height": 256
+    },
+    "source_dn_sha256": "f8841f32e12b4fefbe90c98a7038f051a3a00c445e80d4700818b1de80e76978",
+    "sha256": "a23bedc5507a7cba306a98d2e763cd4ef99bef82fe179dc3030f3d5c14ee817c",
+    "scene_cloud_cover_percent": 0.000123,
+    "clear_crop_percent": 100.0,
+    "downloaded_at_utc": "2026-10-06T08:56:08.930035+00:00",
+    "attribution": "Contains modified Copernicus Sentinel data (2023/2024)",
+    "license_url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+    "boa_offset_already_applied": true,
+    "original_stac_offsets": [
+      -0.1,
+      -0.1,
+      -0.1,
+      -0.1
+    ],
+    "calibration_policy": "Use STAC scale; offset zero when earthsearch:boa_offset_applied is true; otherwise STAC offset"
+  },
+  {
+    "file": "sentinel2_mixed_pune_2024-02-28.tif",
+    "format": "TIFF",
+    "loaded_width": 256,
+    "loaded_height": 256,
+    "source_kind": "real Sentinel-2 L2A surface reflectance; measured B02/B03/B04/B08",
+    "valid_pixels": 65536,
+    "category": "mixed",
+    "location": "Pune Mula-Mutha river and surrounding city",
+    "center_lon": 73.883,
+    "center_lat": 18.535,
+    "acquisition_datetime": "2024-02-28T05:43:54.880000Z",
+    "platform": "sentinel-2b",
+    "stac_item_id": "S2B_43QCA_20240228_0_L2A",
+    "stac_item_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_43QCA_20240228_0_L2A",
+    "stac_metadata_file": "sources/mixed_pune.stac.json",
+    "source_assets": {
+      "B02": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B02.tif",
+      "B03": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B03.tif",
+      "B04": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B04.tif",
+      "B08": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/B08.tif"
+    },
+    "scl_asset": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/43/Q/CA/2024/2/S2B_43QCA_20240228_0_L2A/SCL.tif",
+    "quality_file": "quality/mixed_pune_SCL.tif",
+    "single_band_directory": "satellite_bands/mixed_pune",
+    "crs": "EPSG:32643",
+    "transform": [
+      10.0,
+      0.0,
+      380820.0,
+      0.0,
+      -10.0,
+      2051030.0
+    ],
+    "bbox_wgs84": [
+      73.87072977451713,
+      18.52342557267607,
+      73.89513195605427,
+      18.5467021660854
+    ],
+    "native_pixel_size_m": 10,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B08"
+    ],
+    "scales": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_window": {
+      "col_off": 8082,
+      "row_off": 4897,
+      "width": 256,
+      "height": 256
+    },
+    "source_dn_sha256": "8bd0ad61d1d42673b71e94feed7da72264a0c9cf02e76deb65efcdca22d0763e",
+    "sha256": "ca8f47e8e4f5ea22de71e5dda1515690c8cedc32ab9d48f1882711ddabf84512",
+    "scene_cloud_cover_percent": 0.000123,
+    "clear_crop_percent": 100.0,
+    "downloaded_at_utc": "2026-10-06T08:56:16.150059+00:00",
+    "attribution": "Contains modified Copernicus Sentinel data (2023/2024)",
+    "license_url": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+    "boa_offset_already_applied": true,
+    "original_stac_offsets": [
+      -0.1,
+      -0.1,
+      -0.1,
+      -0.1
+    ],
+    "calibration_policy": "Use STAC scale; offset zero when earthsearch:boa_offset_applied is true; otherwise STAC offset"
+  }
+]

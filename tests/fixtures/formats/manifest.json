@@ -1,0 +1,210 @@
+[
+  {
+    "file": "satellite_4band.tif",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "synthetic illustration with illustrative georeference",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "satellite_float_reflectance.tiff",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "synthetic illustration with illustrative georeference",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "satellite_nodata.tif",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "synthetic illustration with illustrative georeference",
+    "valid_pixels": 8256
+  },
+  {
+    "file": "satellite_reordered.tif",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "synthetic illustration with illustrative georeference",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "satellite_scaled_dn.tif",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "synthetic illustration with illustrative georeference",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_cmyk.jpg",
+    "format": "JPEG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_cmyk.tiff",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_exif_rotated.jpeg",
+    "format": "JPEG",
+    "loaded_width": 64,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 6144
+  },
+  {
+    "file": "scene_grayscale.png",
+    "format": "PNG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_grayscale16.png",
+    "format": "PNG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_grayscale16.tiff",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_large.bmp",
+    "format": "BMP",
+    "loaded_width": 1024,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 98304
+  },
+  {
+    "file": "scene_palette.png",
+    "format": "PNG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_palette.tiff",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.bmp",
+    "format": "BMP",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.jpeg",
+    "format": "JPEG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.jpg",
+    "format": "JPEG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.png",
+    "format": "PNG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.tif",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.tiff",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgb.webp",
+    "format": "WEBP",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  },
+  {
+    "file": "scene_rgba.tiff",
+    "format": "TIFF",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 8064
+  },
+  {
+    "file": "scene_tiny.png",
+    "format": "PNG",
+    "loaded_width": 1,
+    "loaded_height": 1,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 1
+  },
+  {
+    "file": "scene_transparent.png",
+    "format": "PNG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 8064
+  },
+  {
+    "file": "scene_transparent.webp",
+    "format": "WEBP",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 8064
+  },
+  {
+    "file": "scene_uppercase.PNG",
+    "format": "PNG",
+    "loaded_width": 96,
+    "loaded_height": 96,
+    "source_kind": "RGB with estimated NIR (illustration only)",
+    "valid_pixels": 9216
+  }
+]

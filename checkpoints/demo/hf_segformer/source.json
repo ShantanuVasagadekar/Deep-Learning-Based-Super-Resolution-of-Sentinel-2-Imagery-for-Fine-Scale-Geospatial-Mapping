@@ -1,0 +1,23 @@
+{
+  "repository": "boehnen/satlens-segformer",
+  "revision": "19cdd879e535d76e7fcbbd1e8b54dac9c1da90d6",
+  "license": "MIT",
+  "source_sha256": "68f1c70396d3e1b5a9b752408cadbafa90c655da816564ce7d9646b112392ac0",
+  "runtime_sha256": "31b4b8671821ce2aa8060f14a9710f377cdc29bb4762a060d3600ba800f686e3",
+  "format_version": 1,
+  "architecture": "SegFormer-B0",
+  "input_size": 512,
+  "class_names": [
+    "Background",
+    "Bareland",
+    "Rangeland",
+    "Developed space",
+    "Road",
+    "Tree",
+    "Water",
+    "Agriculture land",
+    "Building"
+  ],
+  "trace_parity_max_abs": 1.9073486328125e-06,
+  "source_training_code": "https://github.com/boehnen/satlens/blob/b96058915b2e151012b3fbc7ca0bb63a464722d7/notebooks/train.ipynb"
+}

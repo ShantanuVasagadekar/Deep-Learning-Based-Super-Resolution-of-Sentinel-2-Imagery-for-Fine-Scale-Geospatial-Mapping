@@ -1,0 +1,36 @@
+{
+  "file": "palu_8.tif",
+  "source": "Maxar/xBD satellite RGB, distributed as an OpenEarthMap author demo",
+  "source_url": "https://raw.githubusercontent.com/cliffbb/oem-lightweight/8b301688b870f0eb8a5b93337ca3bc90a28734c4/demo_data/images/palu_8.tif",
+  "sha256": "9ea299669457fa43b84d09864ca785eafe617d82451e354e86382ab65ed3cd4c",
+  "crs": "EPSG:4326",
+  "transform": [
+    4.4878716934508345e-06,
+    0.0,
+    119.8544148212472,
+    0.0,
+    -4.4878716934508345e-06,
+    -0.7076967365067411
+  ],
+  "bounds": [
+    119.8544148212472,
+    -0.7122923171208349,
+    119.8590104018613,
+    -0.7076967365067411
+  ],
+  "shape": [
+    1024,
+    1024
+  ],
+  "band_order": [
+    "red",
+    "green",
+    "blue"
+  ],
+  "acquisition_datetime": null,
+  "license": "CC BY-NC-SA 4.0",
+  "attribution": "Maxar/xBD imagery; OpenEarthMap annotation authors Junshi Xia, Naoto Yokoya, Bruno Adriano, Clifford Broni-Bediako",
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "attribution_url": "https://open-earth-map.org/attribution.html",
+  "processing": "Unchanged upstream GeoTIFF; native pixels and georeferencing preserved"
+}

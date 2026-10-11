@@ -1,0 +1,464 @@
+{
+  "real_model": "OpenEarthMap real manually labeled aerial/satellite imagery; pretrained on train+validation, 0.25-0.5 m GSD",
+  "device": "cpu",
+  "sentinel_reference_note": "SCL is an automatic 20 m quality classifier resampled to 10 m, NOT human ground truth. Only water/vegetation consistency is compared. No road/building accuracy can be inferred.",
+  "annotated_reference_note": "OpenEarthMap upstream demo examples with real human annotations, potentially included in upstream train/validation. Sanity checks only, NOT an independent test set.",
+  "independent_real_satellite_accuracy": null,
+  "sentinel_checks": [
+    {
+      "scene": "sentinel2_urban_delhi_2023-12-05.tif",
+      "category": "urban",
+      "new_detection_seconds": 2.85,
+      "before_percentages": {
+        "0": 1.03,
+        "1": 8.32,
+        "2": 40.38,
+        "3": 0.01,
+        "4": 50.26
+      },
+      "after_percentages": {
+        "Buildings": 4.9,
+        "Roads": 1.79,
+        "Vegetation": 35.23,
+        "Water": 0.0,
+        "Bare Land": 0.0,
+        "Developed space": 58.08
+      },
+      "spectral_correction_pixels": 8627,
+      "water": {
+        "before": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null,
+          "reference_pixels": 0
+        },
+        "after": {
+          "iou": 0.0,
+          "precision": 0.0,
+          "recall": null,
+          "reference_pixels": 0
+        }
+      },
+      "vegetation": {
+        "before": {
+          "iou": 0.11592836946277098,
+          "precision": 0.11619558645707376,
+          "recall": 0.9805484693877551,
+          "reference_pixels": 3136
+        },
+        "after": {
+          "iou": 0.1334716459197787,
+          "precision": 0.13374913374913375,
+          "recall": 0.9846938775510204,
+          "reference_pixels": 3136
+        }
+      }
+    },
+    {
+      "scene": "sentinel2_agriculture_punjab_2023-12-03.tif",
+      "category": "agriculture",
+      "new_detection_seconds": 2.72,
+      "before_percentages": {
+        "0": 1.39,
+        "1": 2.82,
+        "2": 20.86,
+        "3": 0.0,
+        "4": 74.93
+      },
+      "after_percentages": {
+        "Buildings": 31.73,
+        "Roads": 0.18,
+        "Vegetation": 35.37,
+        "Water": 0.0,
+        "Bare Land": 5.13,
+        "Developed space": 27.59
+      },
+      "spectral_correction_pixels": 1300,
+      "water": {
+        "before": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "reference_pixels": 0
+        },
+        "after": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "reference_pixels": 0
+        }
+      },
+      "vegetation": {
+        "before": {
+          "iou": 0.0005851375073142189,
+          "precision": 0.0005852231163130944,
+          "recall": 0.8,
+          "reference_pixels": 10
+        },
+        "after": {
+          "iou": 0.0004314436103201312,
+          "precision": 0.0004314436103201312,
+          "recall": 1.0,
+          "reference_pixels": 10
+        }
+      }
+    },
+    {
+      "scene": "sentinel2_vegetation_western_ghats_2023-12-30.tif",
+      "category": "vegetation",
+      "new_detection_seconds": 2.779,
+      "before_percentages": {
+        "0": 0.01,
+        "1": 0.31,
+        "2": 53.62,
+        "3": 1.67,
+        "4": 44.39
+      },
+      "after_percentages": {
+        "Buildings": 5.78,
+        "Roads": 1.24,
+        "Vegetation": 47.87,
+        "Water": 1.77,
+        "Bare Land": 1.51,
+        "Developed space": 41.84
+      },
+      "spectral_correction_pixels": 9348,
+      "water": {
+        "before": {
+          "iou": 0.5197255574614065,
+          "precision": 0.8316559926806953,
+          "recall": 0.5808306709265175,
+          "reference_pixels": 1565
+        },
+        "after": {
+          "iou": 0.5223713646532439,
+          "precision": 0.8072601555747623,
+          "recall": 0.5968051118210863,
+          "reference_pixels": 1565
+        }
+      },
+      "vegetation": {
+        "before": {
+          "iou": 0.7066713465540151,
+          "precision": 0.8021571473291784,
+          "recall": 0.8558372551996356,
+          "reference_pixels": 32935
+        },
+        "after": {
+          "iou": 0.6819679849340866,
+          "precision": 0.8311444054829454,
+          "recall": 0.7916502201305602,
+          "reference_pixels": 32935
+        }
+      }
+    },
+    {
+      "scene": "sentinel2_water_pavana_2024-02-28.tif",
+      "category": "water",
+      "new_detection_seconds": 2.859,
+      "before_percentages": {
+        "0": 0.05,
+        "1": 54.22,
+        "2": 8.71,
+        "3": 14.73,
+        "4": 22.29
+      },
+      "after_percentages": {
+        "Buildings": 0.22,
+        "Roads": 0.08,
+        "Vegetation": 19.05,
+        "Water": 68.57,
+        "Bare Land": 0.31,
+        "Developed space": 11.76
+      },
+      "spectral_correction_pixels": 6068,
+      "water": {
+        "before": {
+          "iou": 0.2022502514247402,
+          "precision": 1.0,
+          "recall": 0.2022502514247402,
+          "reference_pixels": 47728
+        },
+        "after": {
+          "iou": 0.9411986509416176,
+          "precision": 0.9997997285208838,
+          "recall": 0.9413761314113309,
+          "reference_pixels": 47728
+        }
+      },
+      "vegetation": {
+        "before": {
+          "iou": 0.1000701016473887,
+          "precision": 0.10043975373790677,
+          "recall": 0.964527027027027,
+          "reference_pixels": 592
+        },
+        "after": {
+          "iou": 0.04763843648208469,
+          "precision": 0.04766560743094598,
+          "recall": 0.9881756756756757,
+          "reference_pixels": 592
+        }
+      }
+    },
+    {
+      "scene": "sentinel2_mixed_pune_2024-02-28.tif",
+      "category": "mixed",
+      "new_detection_seconds": 2.806,
+      "before_percentages": {
+        "0": 1.34,
+        "1": 6.85,
+        "2": 33.6,
+        "3": 0.15,
+        "4": 58.05
+      },
+      "after_percentages": {
+        "Buildings": 3.7,
+        "Roads": 4.42,
+        "Vegetation": 26.48,
+        "Water": 0.19,
+        "Bare Land": 0.0,
+        "Developed space": 65.21
+      },
+      "spectral_correction_pixels": 8802,
+      "water": {
+        "before": {
+          "iou": 0.022337237809861073,
+          "precision": 0.8118811881188119,
+          "recall": 0.022453450164293537,
+          "reference_pixels": 3652
+        },
+        "after": {
+          "iou": 0.020253848231163923,
+          "precision": 0.5952380952380952,
+          "recall": 0.02053669222343921,
+          "reference_pixels": 3652
+        }
+      },
+      "vegetation": {
+        "before": {
+          "iou": 0.21433714337143372,
+          "precision": 0.21658860442908462,
+          "recall": 0.9537444933920705,
+          "reference_pixels": 4994
+        },
+        "after": {
+          "iou": 0.2757537688442211,
+          "precision": 0.2783766645529486,
+          "recall": 0.9669603524229075,
+          "reference_pixels": 4994
+        }
+      }
+    }
+  ],
+  "annotated_examples": [
+    {
+      "image": "houston_16.tif",
+      "metrics": {
+        "pixel_accuracy": 0.8046667614148512,
+        "mean_iou": 0.6711021012651901,
+        "per_class_iou": [
+          0.6708738047903058,
+          0.6163175845558495,
+          0.7319622183014994,
+          0.8763331336129419,
+          null,
+          0.4600237650653539
+        ],
+        "confusion_matrix": [
+          [
+            177161,
+            3322,
+            20271,
+            231,
+            0,
+            13559
+          ],
+          [
+            1681,
+            112759,
+            9190,
+            0,
+            0,
+            27866
+          ],
+          [
+            24311,
+            8924,
+            314470,
+            2764,
+            0,
+            12493
+          ],
+          [
+            1233,
+            0,
+            15162,
+            138947,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22306,
+            19214,
+            22041,
+            211,
+            0,
+            100270
+          ]
+        ]
+      },
+      "class_names": [
+        "Buildings",
+        "Roads",
+        "Vegetation",
+        "Water",
+        "Bare Land",
+        "Developed space"
+      ]
+    },
+    {
+      "image": "palu_8.tif",
+      "metrics": {
+        "pixel_accuracy": 0.8135414123535156,
+        "mean_iou": 0.5124729203543421,
+        "per_class_iou": [
+          0.5755988119367216,
+          0.3078565528419806,
+          0.6914011127971674,
+          0.8528197908043338,
+          0.0,
+          0.6471612537458492
+        ],
+        "confusion_matrix": [
+          [
+            90308,
+            964,
+            10742,
+            445,
+            0,
+            10600
+          ],
+          [
+            1074,
+            19753,
+            3359,
+            0,
+            0,
+            7670
+          ],
+          [
+            10266,
+            4989,
+            205035,
+            145,
+            399,
+            30616
+          ],
+          [
+            5315,
+            323,
+            18087,
+            282268,
+            0,
+            16862
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            27180,
+            26031,
+            12912,
+            7537,
+            0,
+            255696
+          ]
+        ]
+      },
+      "class_names": [
+        "Buildings",
+        "Roads",
+        "Vegetation",
+        "Water",
+        "Bare Land",
+        "Developed space"
+      ]
+    }
+  ],
+  "annotated_combined_sanity_check": {
+    "pixel_accuracy": 0.8091044741243194,
+    "mean_iou": 0.5546756534166393,
+    "per_class_iou": [
+      0.6353650743879002,
+      0.5362274855434022,
+      0.715398195478782,
+      0.860435472701757,
+      0.0,
+      0.5806276923879942
+    ],
+    "confusion_matrix": [
+      [
+        267469,
+        4286,
+        31013,
+        676,
+        0,
+        24159
+      ],
+      [
+        2755,
+        132512,
+        12549,
+        0,
+        0,
+        35536
+      ],
+      [
+        34577,
+        13913,
+        519505,
+        2909,
+        399,
+        43109
+      ],
+      [
+        6548,
+        323,
+        33249,
+        421215,
+        0,
+        16869
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        49486,
+        45245,
+        34953,
+        7748,
+        0,
+        355966
+      ]
+    ]
+  }
+}

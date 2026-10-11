@@ -1,0 +1,34 @@
+{
+  "format_version": 1,
+  "task": "real_landcover",
+  "architecture": "OEM-SparseMask-MobileNetV2",
+  "data_source": "OpenEarthMap real manually labeled aerial/satellite imagery; pretrained on train+validation, 0.25-0.5 m GSD",
+  "class_names": [
+    "bareland",
+    "rangeland",
+    "developed space",
+    "road",
+    "tree",
+    "water",
+    "agriculture land",
+    "buildings"
+  ],
+  "channel_order": "BGR",
+  "mean": [
+    0.4325,
+    0.4483,
+    0.3879
+  ],
+  "std": [
+    0.0195,
+    0.0169,
+    0.0179
+  ],
+  "input_size": 1024,
+  "source_url": "https://github.com/cliffbb/oem-lightweight",
+  "weights_url": "https://drive.google.com/file/d/170o8NNBrrIBJqFdoeYCJoyKHvuub0v2k/view",
+  "original_sha256": "5dae062c73fa43b63519a43a46821047ae40dd2663a8cf79abab4bf224ad13f9",
+  "license": "MIT (upstream implementation and published model repository)",
+  "checkpoint_sha256": "99a935ab701121b350602ae9e2d9f317ae219bdd0fb5e85c423f8f182a1b30bd",
+  "code_commit": "8b301688b870f0eb8a5b93337ca3bc90a28734c4"
+}

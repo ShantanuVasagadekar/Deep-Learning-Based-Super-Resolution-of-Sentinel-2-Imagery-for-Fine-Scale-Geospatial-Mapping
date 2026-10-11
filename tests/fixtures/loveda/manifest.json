@@ -1,0 +1,93 @@
+{
+  "dataset": "LoveDA",
+  "split": "validation",
+  "repository": "chloechia/loveda",
+  "revision": "8f77c200865f5f2ab9624bb50bbd06c2034c7411",
+  "selection": "Eight evenly spaced numeric image IDs, selected before inference",
+  "attribution": "Junjue Wang, Zhuo Zheng, Ailong Ma, Xiaoyan Lu, Yanfei Zhong; RSIDEA, Wuhan University",
+  "license": "Academic purposes only; commercial use prohibited; underlying Google Earth terms apply",
+  "source": "https://github.com/Junjue-Wang/LoveDA",
+  "note": "Separate dataset from documented OpenEarthMap training. Small cross-dataset audit; geographic overlap not independently excluded. PNGs have no CRS.",
+  "files": [
+    {
+      "file": "images/2522.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/2522.png",
+      "sha256": "f3cd05870385bd7f978b345b703d407cca757d909fc7be64011449ca711b19fd"
+    },
+    {
+      "file": "labels/2522.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/2522.png",
+      "sha256": "b7b8c33a91c6e30ce27a80d59f3ff8d3c3a9929b9ad739e520004769e9230068"
+    },
+    {
+      "file": "images/2760.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/2760.png",
+      "sha256": "f4d3f0462d9a8a3731c8e6e0a9f4094b322d9f0bd33e4ec86ee6dbda21c80958"
+    },
+    {
+      "file": "labels/2760.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/2760.png",
+      "sha256": "9d72c29f7f346794d48aa3f0a30704d59994411dfb78c071cb949a62a696e78a"
+    },
+    {
+      "file": "images/2998.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/2998.png",
+      "sha256": "2331bd10dd218bfd304d7d32a75703e90ab269bb5f81aab5678a65b1001ae990"
+    },
+    {
+      "file": "labels/2998.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/2998.png",
+      "sha256": "cf2e02d71fb9b8b3a36fcaa208b15f18f41fcae7122903efbb5055ba84a44973"
+    },
+    {
+      "file": "images/3236.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/3236.png",
+      "sha256": "868261d41f88a9693451e2097e264102ef275e490cd13f5613f5a5faad7c9fa8"
+    },
+    {
+      "file": "labels/3236.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/3236.png",
+      "sha256": "6857aff83748fd3bb8a42fd1224b9193caf448cb94fce894e160567fda1a6702"
+    },
+    {
+      "file": "images/3475.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/3475.png",
+      "sha256": "610373258111cceff5d983eac1b6f1e78c5d9d524fabb5c150ddba46c2a3724f"
+    },
+    {
+      "file": "labels/3475.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/3475.png",
+      "sha256": "791e7ef46fd04c62e75f22e3df0ce3df8c462d51f3c28c848f543e29c1fac78f"
+    },
+    {
+      "file": "images/3713.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/3713.png",
+      "sha256": "63a8ad45587536c87fdd70ad0dc7a65432e50c04a7a5ebe279009b66150ea244"
+    },
+    {
+      "file": "labels/3713.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/3713.png",
+      "sha256": "3f831a5cd83f97d342faca6713985434887e666f8d8d65531e31757330ff4b61"
+    },
+    {
+      "file": "images/3951.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/3951.png",
+      "sha256": "9dfc85bdc2306d50155e177517a5653c6ffe957f49738adaf9dd28a534058552"
+    },
+    {
+      "file": "labels/3951.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/3951.png",
+      "sha256": "a1e28f8a152f44a9b16bd6b356bd00dc5b7934eef7f886be290e342ec5f6c171"
+    },
+    {
+      "file": "images/4190.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20images/4190.png",
+      "sha256": "1fb30e24f8b1d4554261d8151ed7c120cb15368369a1c813656e32c5c52198ae"
+    },
+    {
+      "file": "labels/4190.png",
+      "url": "https://huggingface.co/datasets/chloechia/loveda/resolve/8f77c200865f5f2ab9624bb50bbd06c2034c7411/urban%3Arural%20val%20masks/4190.png",
+      "sha256": "98389d599c476dead792c8f6148332e2eafa1b382a4a1dad58c44ebd1bcb7a94"
+    }
+  ]
+}

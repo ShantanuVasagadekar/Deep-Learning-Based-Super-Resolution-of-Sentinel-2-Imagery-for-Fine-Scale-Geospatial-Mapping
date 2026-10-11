@@ -1,0 +1,3531 @@
+{
+  "target_pixel_accuracy": 0.85,
+  "target_demonstrated": false,
+  "universal_accuracy_guarantee": false,
+  "fine_tuning_performed": false,
+  "oem_note": "Two upstream examples may overlap training. Used to compare candidates, NOT an independent test.",
+  "loveda_note": "Eight fixed LoveDA validation images, separate from documented OpenEarthMap training; small cross-dataset audit, not the full benchmark. No parameters tuned using these results. Geographic overlap not independently excluded.",
+  "mapping_note": "OEM tree/rangeland/agriculture and LoveDA forest/agriculture map to Vegetation. LoveDA 0=no-data and 1=background are excluded because background has no equivalent class. Exclusion counts are reported. Abstentions count as errors.",
+  "device": "cpu",
+  "source": {
+    "repository": "boehnen/satlens-segformer",
+    "revision": "19cdd879e535d76e7fcbbd1e8b54dac9c1da90d6",
+    "license": "MIT",
+    "source_sha256": "68f1c70396d3e1b5a9b752408cadbafa90c655da816564ce7d9646b112392ac0",
+    "runtime_sha256": "31b4b8671821ce2aa8060f14a9710f377cdc29bb4762a060d3600ba800f686e3",
+    "format_version": 1,
+    "architecture": "SegFormer-B0",
+    "input_size": 512,
+    "class_names": [
+      "Background",
+      "Bareland",
+      "Rangeland",
+      "Developed space",
+      "Road",
+      "Tree",
+      "Water",
+      "Agriculture land",
+      "Building"
+    ],
+    "trace_parity_max_abs": 1.9073486328125e-06,
+    "source_training_code": "https://github.com/boehnen/satlens/blob/b96058915b2e151012b3fbc7ca0bb63a464722d7/notebooks/train.ipynb"
+  },
+  "datasets": {
+    "real_landcover": {
+      "examples": [
+        {
+          "image": "houston_16.tif",
+          "total_pixels": 1048576,
+          "excluded_pixels": 183,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.8046667614148512,
+              "mean_iou": 0.6711021012651901,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6708738047903058,
+                  "recall": 0.825756022074726,
+                  "reference_pixels": 214544
+                },
+                "Roads": {
+                  "iou": 0.6163175845558495,
+                  "recall": 0.7443034799598669,
+                  "reference_pixels": 151496
+                },
+                "Vegetation": {
+                  "iou": 0.7319622183014994,
+                  "recall": 0.8663992373857319,
+                  "reference_pixels": 362962
+                },
+                "Water": {
+                  "iou": 0.8763331336129419,
+                  "recall": 0.8944183741124823,
+                  "reference_pixels": 155349
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.4600237650653539,
+                  "recall": 0.6112459004401312,
+                  "reference_pixels": 164042
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 1048393,
+              "confusion_matrix": [
+                [
+                  177161,
+                  3322,
+                  20271,
+                  231,
+                  0,
+                  13559,
+                  0
+                ],
+                [
+                  1681,
+                  112759,
+                  9190,
+                  0,
+                  0,
+                  27866,
+                  0
+                ],
+                [
+                  24311,
+                  8924,
+                  314470,
+                  2764,
+                  0,
+                  12493,
+                  0
+                ],
+                [
+                  1233,
+                  0,
+                  15162,
+                  138947,
+                  0,
+                  7,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  22306,
+                  19214,
+                  22041,
+                  211,
+                  0,
+                  100270,
+                  0
+                ]
+              ],
+              "seconds": 2.771
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.7603103034835219,
+              "mean_iou": 0.603734531279825,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6133315485392036,
+                  "recall": 0.6620506749198299,
+                  "reference_pixels": 214544
+                },
+                "Roads": {
+                  "iou": 0.5500231878971711,
+                  "recall": 0.579322226329408,
+                  "reference_pixels": 151496
+                },
+                "Vegetation": {
+                  "iou": 0.6749788095042791,
+                  "recall": 0.9521768118976642,
+                  "reference_pixels": 362962
+                },
+                "Water": {
+                  "iou": 0.7372116220778556,
+                  "recall": 0.7421611983340736,
+                  "reference_pixels": 155349
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.44312748838061605,
+                  "recall": 0.6486265712439497,
+                  "reference_pixels": 164042
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 1048393,
+              "confusion_matrix": [
+                [
+                  142039,
+                  1208,
+                  48267,
+                  0,
+                  0,
+                  23030,
+                  0
+                ],
+                [
+                  1130,
+                  87765,
+                  18965,
+                  0,
+                  0,
+                  43636,
+                  0
+                ],
+                [
+                  4483,
+                  2451,
+                  345604,
+                  1043,
+                  0,
+                  9381,
+                  0
+                ],
+                [
+                  1568,
+                  0,
+                  38460,
+                  115294,
+                  0,
+                  27,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  9861,
+                  4411,
+                  43368,
+                  0,
+                  0,
+                  106402,
+                  0
+                ]
+              ],
+              "seconds": 0.932
+            },
+            "combined": {
+              "pixel_accuracy": 0.8254280598973858,
+              "mean_iou": 0.6965458960919244,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.729066927210552,
+                  "recall": 0.8347378626295772,
+                  "reference_pixels": 214544
+                },
+                "Roads": {
+                  "iou": 0.6373473666402837,
+                  "recall": 0.6963088134340181,
+                  "reference_pixels": 151496
+                },
+                "Vegetation": {
+                  "iou": 0.753951210746215,
+                  "recall": 0.9247359227687747,
+                  "reference_pixels": 362962
+                },
+                "Water": {
+                  "iou": 0.8470753015515675,
+                  "recall": 0.8525771005928586,
+                  "reference_pixels": 155349
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.5152886743110038,
+                  "recall": 0.6870557540142159,
+                  "reference_pixels": 164042
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 1048393,
+              "confusion_matrix": [
+                [
+                  179088,
+                  1060,
+                  23392,
+                  13,
+                  0,
+                  10991,
+                  0
+                ],
+                [
+                  822,
+                  105488,
+                  10116,
+                  0,
+                  0,
+                  35070,
+                  0
+                ],
+                [
+                  13618,
+                  4109,
+                  335644,
+                  970,
+                  0,
+                  8621,
+                  0
+                ],
+                [
+                  1579,
+                  0,
+                  21323,
+                  132447,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  15077,
+                  8846,
+                  27387,
+                  26,
+                  0,
+                  112706,
+                  0
+                ]
+              ],
+              "seconds": 5.919
+            }
+          }
+        },
+        {
+          "image": "palu_8.tif",
+          "total_pixels": 1048576,
+          "excluded_pixels": 0,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.8135414123535156,
+              "mean_iou": 0.5124729203543421,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.5755988119367216,
+                  "recall": 0.7987687844399827,
+                  "reference_pixels": 113059
+                },
+                "Roads": {
+                  "iou": 0.3078565528419806,
+                  "recall": 0.6200715720743345,
+                  "reference_pixels": 31856
+                },
+                "Vegetation": {
+                  "iou": 0.6914011127971674,
+                  "recall": 0.8154106184132034,
+                  "reference_pixels": 251450
+                },
+                "Water": {
+                  "iou": 0.8528197908043338,
+                  "recall": 0.8742872187204782,
+                  "reference_pixels": 322855
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.6471612537458492,
+                  "recall": 0.7763514252055527,
+                  "reference_pixels": 329356
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 1048576,
+              "confusion_matrix": [
+                [
+                  90308,
+                  964,
+                  10742,
+                  445,
+                  0,
+                  10600,
+                  0
+                ],
+                [
+                  1074,
+                  19753,
+                  3359,
+                  0,
+                  0,
+                  7670,
+                  0
+                ],
+                [
+                  10266,
+                  4989,
+                  205035,
+                  145,
+                  399,
+                  30616,
+                  0
+                ],
+                [
+                  5315,
+                  323,
+                  18087,
+                  282268,
+                  0,
+                  16862,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  27180,
+                  26031,
+                  12912,
+                  7537,
+                  0,
+                  255696,
+                  0
+                ]
+              ],
+              "seconds": 2.338
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.8411531448364258,
+              "mean_iou": 0.6391925406894121,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6090108074619673,
+                  "recall": 0.7825206308210757,
+                  "reference_pixels": 113059
+                },
+                "Roads": {
+                  "iou": 0.2881612187093317,
+                  "recall": 0.47265821195379204,
+                  "reference_pixels": 31856
+                },
+                "Vegetation": {
+                  "iou": 0.720938418924829,
+                  "recall": 0.8063471863193478,
+                  "reference_pixels": 251450
+                },
+                "Water": {
+                  "iou": 0.9131074728667881,
+                  "recall": 0.9818928001734525,
+                  "reference_pixels": 322855
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.6647447854841445,
+                  "recall": 0.7855329795115316,
+                  "reference_pixels": 329356
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 1048576,
+              "confusion_matrix": [
+                [
+                  88471,
+                  209,
+                  11081,
+                  26,
+                  0,
+                  13272,
+                  0
+                ],
+                [
+                  727,
+                  15057,
+                  4678,
+                  0,
+                  0,
+                  11394,
+                  0
+                ],
+                [
+                  8050,
+                  1266,
+                  202756,
+                  6183,
+                  0,
+                  33195,
+                  0
+                ],
+                [
+                  1757,
+                  0,
+                  2104,
+                  317009,
+                  0,
+                  1985,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  21677,
+                  18921,
+                  11926,
+                  18112,
+                  0,
+                  258720,
+                  0
+                ]
+              ],
+              "seconds": 0.834
+            },
+            "combined": {
+              "pixel_accuracy": 0.8567676544189453,
+              "mean_iou": 0.6727080985141783,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6435688530456084,
+                  "recall": 0.8272317993260156,
+                  "reference_pixels": 113059
+                },
+                "Roads": {
+                  "iou": 0.3649377096310494,
+                  "recall": 0.5738008538422903,
+                  "reference_pixels": 31856
+                },
+                "Vegetation": {
+                  "iou": 0.7384264635989722,
+                  "recall": 0.8218015510041757,
+                  "reference_pixels": 251450
+                },
+                "Water": {
+                  "iou": 0.9130111062852888,
+                  "recall": 0.9571324588437534,
+                  "reference_pixels": 322855
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.7035963600099726,
+                  "recall": 0.8225871093892323,
+                  "reference_pixels": 329356
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 1048576,
+              "confusion_matrix": [
+                [
+                  93526,
+                  173,
+                  10214,
+                  107,
+                  0,
+                  9039,
+                  0
+                ],
+                [
+                  535,
+                  18279,
+                  4271,
+                  0,
+                  0,
+                  8771,
+                  0
+                ],
+                [
+                  8552,
+                  2325,
+                  206642,
+                  2858,
+                  0,
+                  31073,
+                  0
+                ],
+                [
+                  4305,
+                  37,
+                  2681,
+                  309015,
+                  0,
+                  6817,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  18873,
+                  15697,
+                  11225,
+                  12637,
+                  0,
+                  270924,
+                  0
+                ]
+              ],
+              "seconds": 5.033
+            }
+          }
+        }
+      ],
+      "combined": {
+        "sparsemask": {
+          "pixel_accuracy": 0.8091044741243194,
+          "mean_iou": 0.5546756534166393,
+          "per_class": {
+            "Buildings": {
+              "iou": 0.6353650743879002,
+              "recall": 0.8164424623706132,
+              "reference_pixels": 327603
+            },
+            "Roads": {
+              "iou": 0.5362274855434022,
+              "recall": 0.7227191413237924,
+              "reference_pixels": 183352
+            },
+            "Vegetation": {
+              "iou": 0.715398195478782,
+              "recall": 0.8455319883075201,
+              "reference_pixels": 614412
+            },
+            "Water": {
+              "iou": 0.860435472701757,
+              "recall": 0.8808270110664068,
+              "reference_pixels": 478204
+            },
+            "Bare Land": {
+              "iou": 0.0,
+              "recall": null,
+              "reference_pixels": 0
+            },
+            "Developed space": {
+              "iou": 0.5806276923879942,
+              "recall": 0.7214581331906493,
+              "reference_pixels": 493398
+            }
+          },
+          "abstained_pixels": 0,
+          "evaluated_pixels": 2096969,
+          "confusion_matrix": [
+            [
+              267469,
+              4286,
+              31013,
+              676,
+              0,
+              24159,
+              0
+            ],
+            [
+              2755,
+              132512,
+              12549,
+              0,
+              0,
+              35536,
+              0
+            ],
+            [
+              34577,
+              13913,
+              519505,
+              2909,
+              399,
+              43109,
+              0
+            ],
+            [
+              6548,
+              323,
+              33249,
+              421215,
+              0,
+              16869,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              49486,
+              45245,
+              34953,
+              7748,
+              0,
+              355966,
+              0
+            ]
+          ]
+        },
+        "huggingface": {
+          "pixel_accuracy": 0.8007352516894622,
+          "mean_iou": 0.6454063933967287,
+          "per_class": {
+            "Buildings": {
+              "iou": 0.6116659944381939,
+              "recall": 0.7036260351706181,
+              "reference_pixels": 327603
+            },
+            "Roads": {
+              "iou": 0.48542616774778347,
+              "recall": 0.5607901740913652,
+              "reference_pixels": 183352
+            },
+            "Vegetation": {
+              "iou": 0.6912731118761669,
+              "recall": 0.8924955892788552,
+              "reference_pixels": 614412
+            },
+            "Water": {
+              "iou": 0.8584798875226385,
+              "recall": 0.9040137681826166,
+              "reference_pixels": 478204
+            },
+            "Bare Land": {
+              "iou": null,
+              "recall": null,
+              "reference_pixels": 0
+            },
+            "Developed space": {
+              "iou": 0.5801868053988604,
+              "recall": 0.7400151601749501,
+              "reference_pixels": 493398
+            }
+          },
+          "abstained_pixels": 0,
+          "evaluated_pixels": 2096969,
+          "confusion_matrix": [
+            [
+              230510,
+              1417,
+              59348,
+              26,
+              0,
+              36302,
+              0
+            ],
+            [
+              1857,
+              102822,
+              23643,
+              0,
+              0,
+              55030,
+              0
+            ],
+            [
+              12533,
+              3717,
+              548360,
+              7226,
+              0,
+              42576,
+              0
+            ],
+            [
+              3325,
+              0,
+              40564,
+              432303,
+              0,
+              2012,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              31538,
+              23332,
+              55294,
+              18112,
+              0,
+              365122,
+              0
+            ]
+          ]
+        },
+        "combined": {
+          "pixel_accuracy": 0.8410992246428058,
+          "mean_iou": 0.7093726271617239,
+          "per_class": {
+            "Buildings": {
+              "iou": 0.6972867067044536,
+              "recall": 0.8321474467572031,
+              "reference_pixels": 327603
+            },
+            "Roads": {
+              "iou": 0.5740611041795185,
+              "recall": 0.6750239975566125,
+              "reference_pixels": 183352
+            },
+            "Vegetation": {
+              "iou": 0.7479590246351485,
+              "recall": 0.8826097146540106,
+              "reference_pixels": 614412
+            },
+            "Water": {
+              "iou": 0.8921758637066378,
+              "recall": 0.9231666820018235,
+              "reference_pixels": 478204
+            },
+            "Bare Land": {
+              "iou": null,
+              "recall": null,
+              "reference_pixels": 0
+            },
+            "Developed space": {
+              "iou": 0.6353804365828613,
+              "recall": 0.777526459369515,
+              "reference_pixels": 493398
+            }
+          },
+          "abstained_pixels": 0,
+          "evaluated_pixels": 2096969,
+          "confusion_matrix": [
+            [
+              272614,
+              1233,
+              33606,
+              120,
+              0,
+              20030,
+              0
+            ],
+            [
+              1357,
+              123767,
+              14387,
+              0,
+              0,
+              43841,
+              0
+            ],
+            [
+              22170,
+              6434,
+              542286,
+              3828,
+              0,
+              39694,
+              0
+            ],
+            [
+              5884,
+              37,
+              24004,
+              441462,
+              0,
+              6817,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              33950,
+              24543,
+              38612,
+              12663,
+              0,
+              383630,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    "loveda": {
+      "examples": [
+        {
+          "image": "2522.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 201102,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.7854058059598289,
+              "mean_iou": 0.38159590240315594,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.4209757499321509,
+                  "recall": 0.45949101300783257,
+                  "reference_pixels": 114777
+                },
+                "Roads": {
+                  "iou": 0.4679865465879831,
+                  "recall": 0.46902086677367577,
+                  "reference_pixels": 80990
+                },
+                "Vegetation": {
+                  "iou": 0.7754086782818373,
+                  "recall": 0.9842592488400268,
+                  "reference_pixels": 533202
+                },
+                "Water": {
+                  "iou": 0.6252044396169645,
+                  "recall": 0.6406329955992222,
+                  "reference_pixels": 78168
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 40337
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 847474,
+              "confusion_matrix": [
+                [
+                  52739,
+                  46,
+                  55804,
+                  0,
+                  0,
+                  6188,
+                  0
+                ],
+                [
+                  6299,
+                  37986,
+                  20286,
+                  0,
+                  0,
+                  16419,
+                  0
+                ],
+                [
+                  3453,
+                  126,
+                  524809,
+                  1929,
+                  0,
+                  2885,
+                  0
+                ],
+                [
+                  0,
+                  7,
+                  28031,
+                  50077,
+                  0,
+                  53,
+                  0
+                ],
+                [
+                  749,
+                  0,
+                  39493,
+                  0,
+                  0,
+                  95,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 2.931
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.8360162081668582,
+              "mean_iou": 0.47429719484202487,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.5167349351801022,
+                  "recall": 0.5330684719063924,
+                  "reference_pixels": 114777
+                },
+                "Roads": {
+                  "iou": 0.6723773487953847,
+                  "recall": 0.7108902333621435,
+                  "reference_pixels": 80990
+                },
+                "Vegetation": {
+                  "iou": 0.8352291514583237,
+                  "recall": 0.9806339811178503,
+                  "reference_pixels": 533202
+                },
+                "Water": {
+                  "iou": 0.8214417336183386,
+                  "recall": 0.8554267731040835,
+                  "reference_pixels": 78168
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 40337
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 847474,
+              "confusion_matrix": [
+                [
+                  61184,
+                  100,
+                  34144,
+                  40,
+                  0,
+                  19309,
+                  0
+                ],
+                [
+                  1717,
+                  57575,
+                  8171,
+                  0,
+                  0,
+                  13527,
+                  0
+                ],
+                [
+                  1356,
+                  4342,
+                  522876,
+                  3194,
+                  0,
+                  1434,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  11300,
+                  66867,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  555,
+                  197,
+                  39210,
+                  0,
+                  0,
+                  375,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.908
+            },
+            "combined": {
+              "pixel_accuracy": 0.830922246582196,
+              "mean_iou": 0.45871535832067273,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.49330485159295495,
+                  "recall": 0.5170896608205476,
+                  "reference_pixels": 114777
+                },
+                "Roads": {
+                  "iou": 0.6226858112261205,
+                  "recall": 0.6254228917150265,
+                  "reference_pixels": 80990
+                },
+                "Vegetation": {
+                  "iou": 0.820701482113758,
+                  "recall": 0.9917798507882566,
+                  "reference_pixels": 533202
+                },
+                "Water": {
+                  "iou": 0.815600004991203,
+                  "recall": 0.8361861631358101,
+                  "reference_pixels": 78168
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 40337
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 847474,
+              "confusion_matrix": [
+                [
+                  59350,
+                  1,
+                  47617,
+                  0,
+                  0,
+                  7809,
+                  0
+                ],
+                [
+                  4196,
+                  50653,
+                  10990,
+                  0,
+                  0,
+                  15151,
+                  0
+                ],
+                [
+                  827,
+                  355,
+                  528819,
+                  1973,
+                  0,
+                  1228,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  12805,
+                  65363,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  511,
+                  0,
+                  39736,
+                  0,
+                  0,
+                  90,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 5.787
+            }
+          }
+        },
+        {
+          "image": "2760.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 113649,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.7283723755972391,
+              "mean_iou": 0.2964664119943387,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.3729810424835426,
+                  "recall": 0.628655879343666,
+                  "reference_pixels": 131945
+                },
+                "Roads": {
+                  "iou": 0.20621325494388026,
+                  "recall": 0.2237996490668368,
+                  "reference_pixels": 68959
+                },
+                "Vegetation": {
+                  "iou": 0.7564238818818766,
+                  "recall": 0.8636986249421686,
+                  "reference_pixels": 659245
+                },
+                "Water": {
+                  "iou": 0.4431802926567324,
+                  "recall": 0.45536052967343704,
+                  "reference_pixels": 28999
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 45779
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 934927,
+              "confusion_matrix": [
+                [
+                  82948,
+                  1553,
+                  12824,
+                  0,
+                  0,
+                  34620,
+                  0
+                ],
+                [
+                  6418,
+                  15433,
+                  24265,
+                  0,
+                  0,
+                  22843,
+                  0
+                ],
+                [
+                  79911,
+                  3879,
+                  569389,
+                  797,
+                  0,
+                  5269,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  15661,
+                  13205,
+                  0,
+                  133,
+                  0
+                ],
+                [
+                  4118,
+                  449,
+                  40743,
+                  0,
+                  0,
+                  469,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 3.208
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.8070287840654938,
+              "mean_iou": 0.3519696414875734,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.5189690006326402,
+                  "recall": 0.5781954602296412,
+                  "reference_pixels": 131945
+                },
+                "Roads": {
+                  "iou": 0.38359450961574887,
+                  "recall": 0.4405226293884772,
+                  "reference_pixels": 68959
+                },
+                "Vegetation": {
+                  "iou": 0.830896464267589,
+                  "recall": 0.9660642098157741,
+                  "reference_pixels": 659245
+                },
+                "Water": {
+                  "iou": 0.3783578744094624,
+                  "recall": 0.3783578744094624,
+                  "reference_pixels": 28999
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 45779
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 934927,
+              "confusion_matrix": [
+                [
+                  76290,
+                  2442,
+                  19673,
+                  0,
+                  0,
+                  33540,
+                  0
+                ],
+                [
+                  1559,
+                  30378,
+                  24743,
+                  0,
+                  0,
+                  12279,
+                  0
+                ],
+                [
+                  13499,
+                  7351,
+                  636873,
+                  0,
+                  0,
+                  1522,
+                  0
+                ],
+                [
+                  0,
+                  98,
+                  17868,
+                  10972,
+                  0,
+                  61,
+                  0
+                ],
+                [
+                  0,
+                  343,
+                  44960,
+                  0,
+                  0,
+                  476,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.872
+            },
+            "combined": {
+              "pixel_accuracy": 0.7679401707299073,
+              "mean_iou": 0.3268805625662921,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.43765977072078005,
+                  "recall": 0.6293152449884422,
+                  "reference_pixels": 131945
+                },
+                "Roads": {
+                  "iou": 0.3007458065210953,
+                  "recall": 0.3239606142780493,
+                  "reference_pixels": 68959
+                },
+                "Vegetation": {
+                  "iou": 0.7901387381882921,
+                  "recall": 0.9101987880074934,
+                  "reference_pixels": 659245
+                },
+                "Water": {
+                  "iou": 0.4327390599675851,
+                  "recall": 0.4327390599675851,
+                  "reference_pixels": 28999
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 45779
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 934927,
+              "confusion_matrix": [
+                [
+                  83035,
+                  1245,
+                  14587,
+                  0,
+                  0,
+                  33078,
+                  0
+                ],
+                [
+                  4175,
+                  22340,
+                  24338,
+                  0,
+                  0,
+                  18106,
+                  0
+                ],
+                [
+                  53444,
+                  3755,
+                  600044,
+                  0,
+                  0,
+                  2002,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  16421,
+                  12549,
+                  0,
+                  29,
+                  0
+                ],
+                [
+                  161,
+                  323,
+                  44825,
+                  0,
+                  0,
+                  470,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 6.046
+            }
+          }
+        },
+        {
+          "image": "2998.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 53502,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.7718039060411588,
+              "mean_iou": 0.25784624123182465,
+              "per_class": {
+                "Buildings": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.040786948176583494,
+                  "recall": 0.06395786305492852,
+                  "reference_pixels": 3987
+                },
+                "Vegetation": {
+                  "iou": 0.7146737096616648,
+                  "recall": 0.9972227483286042,
+                  "reference_pixels": 564947
+                },
+                "Water": {
+                  "iou": 0.533770548320875,
+                  "recall": 0.5344713057304852,
+                  "reference_pixels": 382376
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 43764
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 995074,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  255,
+                  3673,
+                  0,
+                  0,
+                  59,
+                  0
+                ],
+                [
+                  0,
+                  302,
+                  563378,
+                  499,
+                  0,
+                  768,
+                  0
+                ],
+                [
+                  0,
+                  64,
+                  177916,
+                  204369,
+                  0,
+                  27,
+                  0
+                ],
+                [
+                  0,
+                  1899,
+                  41765,
+                  3,
+                  0,
+                  97,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 2.906
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.682161326695301,
+              "mean_iou": 0.19302872495302648,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.22002694207453974,
+                  "recall": 0.2457988462503135,
+                  "reference_pixels": 3987
+                },
+                "Vegetation": {
+                  "iou": 0.6419392875376511,
+                  "recall": 0.9993114398341791,
+                  "reference_pixels": 564947
+                },
+                "Water": {
+                  "iou": 0.29620612010596814,
+                  "recall": 0.29620844404460533,
+                  "reference_pixels": 382376
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 43764
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 995074,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1034,
+                  980,
+                  1749,
+                  0,
+                  0,
+                  224,
+                  0
+                ],
+                [
+                  17,
+                  371,
+                  564558,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  269101,
+                  113263,
+                  0,
+                  12,
+                  0
+                ],
+                [
+                  4,
+                  96,
+                  43660,
+                  3,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.865
+            },
+            "combined": {
+              "pixel_accuracy": 0.7743816037802214,
+              "mean_iou": 0.27226792607442957,
+              "per_class": {
+                "Buildings": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.10834454912516824,
+                  "recall": 0.12114371708051166,
+                  "reference_pixels": 3987
+                },
+                "Vegetation": {
+                  "iou": 0.7159416871466724,
+                  "recall": 0.9993379909973856,
+                  "reference_pixels": 564947
+                },
+                "Water": {
+                  "iou": 0.5370533941003073,
+                  "recall": 0.5374578948469569,
+                  "reference_pixels": 382376
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 43764
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 995074,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  483,
+                  3474,
+                  0,
+                  0,
+                  30,
+                  0
+                ],
+                [
+                  0,
+                  6,
+                  564573,
+                  280,
+                  0,
+                  88,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  176865,
+                  205511,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  465,
+                  43288,
+                  8,
+                  0,
+                  3,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 5.967
+            }
+          }
+        },
+        {
+          "image": "3236.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 634965,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.8998721020475761,
+              "mean_iou": 0.3963516931976562,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.2603734439834025,
+                  "recall": 0.26240133814228217,
+                  "reference_pixels": 19131
+                },
+                "Vegetation": {
+                  "iou": 0.8289832816782213,
+                  "recall": 0.9730158208071572,
+                  "reference_pixels": 152015
+                },
+                "Water": {
+                  "iou": 0.8924017403266572,
+                  "recall": 0.9043119625512961,
+                  "reference_pixels": 242465
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 413611,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  5020,
+                  5592,
+                  1053,
+                  0,
+                  7466,
+                  0
+                ],
+                [
+                  62,
+                  0,
+                  147913,
+                  2183,
+                  0,
+                  1857,
+                  0
+                ],
+                [
+                  0,
+                  149,
+                  20820,
+                  219264,
+                  0,
+                  2232,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 2.87
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.9322745284820761,
+              "mean_iou": 0.38685466956198056,
+              "per_class": {
+                "Buildings": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.10420684981494031,
+                  "recall": 0.10449009461084105,
+                  "reference_pixels": 19131
+                },
+                "Vegetation": {
+                  "iou": 0.890716477809254,
+                  "recall": 0.9928164983718712,
+                  "reference_pixels": 152015
+                },
+                "Water": {
+                  "iou": 0.9393500201857086,
+                  "recall": 0.9596312869898749,
+                  "reference_pixels": 242465
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 413611,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1999,
+                  8511,
+                  4252,
+                  1331,
+                  3038,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  150923,
+                  983,
+                  0,
+                  109,
+                  0
+                ],
+                [
+                  0,
+                  52,
+                  8914,
+                  232677,
+                  145,
+                  677,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.912
+            },
+            "combined": {
+              "pixel_accuracy": 0.9329103916481912,
+              "mean_iou": 0.5154785545886864,
+              "per_class": {
+                "Buildings": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.23420791820979606,
+                  "recall": 0.2346976112069416,
+                  "reference_pixels": 19131
+                },
+                "Vegetation": {
+                  "iou": 0.8852527844189165,
+                  "recall": 0.9986646054665658,
+                  "reference_pixels": 152015
+                },
+                "Water": {
+                  "iou": 0.9424535157260332,
+                  "recall": 0.9467758233147052,
+                  "reference_pixels": 242465
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 413611,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  4490,
+                  7875,
+                  1096,
+                  0,
+                  5670,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  151812,
+                  16,
+                  0,
+                  187,
+                  0
+                ],
+                [
+                  0,
+                  40,
+                  11600,
+                  229560,
+                  0,
+                  1265,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 5.582
+            }
+          }
+        },
+        {
+          "image": "3475.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 331893,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.814897241876813,
+              "mean_iou": 0.32852395294921716,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.42148673100120626,
+                  "recall": 0.42148673100120626,
+                  "reference_pixels": 132640
+                },
+                "Roads": {
+                  "iou": 0.642950253130021,
+                  "recall": 0.6582966043826433,
+                  "reference_pixels": 32218
+                },
+                "Vegetation": {
+                  "iou": 0.9067067335640757,
+                  "recall": 0.9186028179223485,
+                  "reference_pixels": 551825
+                },
+                "Water": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 716683,
+              "confusion_matrix": [
+                [
+                  55906,
+                  90,
+                  7173,
+                  0,
+                  0,
+                  69471,
+                  0
+                ],
+                [
+                  0,
+                  21209,
+                  67,
+                  0,
+                  8,
+                  10934,
+                  0
+                ],
+                [
+                  0,
+                  679,
+                  506908,
+                  6688,
+                  1430,
+                  36120,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 2.451
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.8074267144609263,
+              "mean_iou": 0.4933518969164375,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.8726149208741523,
+                  "recall": 0.8730096501809409,
+                  "reference_pixels": 132640
+                },
+                "Roads": {
+                  "iou": 0.8097090616055798,
+                  "recall": 0.904432304922714,
+                  "reference_pixels": 32218
+                },
+                "Vegetation": {
+                  "iou": 0.7844355021024552,
+                  "recall": 0.7859991845240792,
+                  "reference_pixels": 551825
+                },
+                "Water": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Bare Land": {
+                  "iou": null,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 716683,
+              "confusion_matrix": [
+                [
+                  115796,
+                  0,
+                  742,
+                  0,
+                  0,
+                  16102,
+                  0
+                ],
+                [
+                  0,
+                  29139,
+                  358,
+                  0,
+                  0,
+                  2721,
+                  0
+                ],
+                [
+                  60,
+                  3769,
+                  433734,
+                  99293,
+                  0,
+                  14969,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.78
+            },
+            "combined": {
+              "pixel_accuracy": 0.8634570653971142,
+              "mean_iou": 0.3930366852711795,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6973085042219541,
+                  "recall": 0.6973085042219541,
+                  "reference_pixels": 132640
+                },
+                "Roads": {
+                  "iou": 0.7565862932673446,
+                  "recall": 0.7781674840151468,
+                  "reference_pixels": 32218
+                },
+                "Vegetation": {
+                  "iou": 0.9043253141377786,
+                  "recall": 0.9083731255379875,
+                  "reference_pixels": 551825
+                },
+                "Water": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 716683,
+              "confusion_matrix": [
+                [
+                  92491,
+                  0,
+                  2278,
+                  0,
+                  0,
+                  37871,
+                  0
+                ],
+                [
+                  0,
+                  25071,
+                  192,
+                  0,
+                  0,
+                  6955,
+                  0
+                ],
+                [
+                  0,
+                  919,
+                  501263,
+                  25510,
+                  4,
+                  24129,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 5.137
+            }
+          }
+        },
+        {
+          "image": "3713.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 97915,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.8306420480065975,
+              "mean_iou": 0.37315371848762724,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.3142144343548997,
+                  "recall": 0.8001144095863191,
+                  "reference_pixels": 33214
+                },
+                "Roads": {
+                  "iou": 0.6366919799962956,
+                  "recall": 0.6587299686204997,
+                  "reference_pixels": 41747
+                },
+                "Vegetation": {
+                  "iou": 0.8263911281173045,
+                  "recall": 0.9333176874904743,
+                  "reference_pixels": 741411
+                },
+                "Water": {
+                  "iou": 0.4616247684572638,
+                  "recall": 0.472825438815226,
+                  "reference_pixels": 92237
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 42052
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 950661,
+              "confusion_matrix": [
+                [
+                  26575,
+                  667,
+                  1536,
+                  0,
+                  0,
+                  4436,
+                  0
+                ],
+                [
+                  3982,
+                  27500,
+                  5899,
+                  0,
+                  0,
+                  4366,
+                  0
+                ],
+                [
+                  45240,
+                  737,
+                  691972,
+                  2238,
+                  0,
+                  1224,
+                  0
+                ],
+                [
+                  2042,
+                  41,
+                  46542,
+                  43612,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  98,
+                  0,
+                  41954,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 2.424
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.8256802372244154,
+              "mean_iou": 0.33698114586909766,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.38537593564964806,
+                  "recall": 0.6231408442223159,
+                  "reference_pixels": 33214
+                },
+                "Roads": {
+                  "iou": 0.6053429329291399,
+                  "recall": 0.6122595635614535,
+                  "reference_pixels": 41747
+                },
+                "Vegetation": {
+                  "iou": 0.8338444979399102,
+                  "recall": 0.9717619511984581,
+                  "reference_pixels": 741411
+                },
+                "Water": {
+                  "iou": 0.19732350869588774,
+                  "recall": 0.19742619556143412,
+                  "reference_pixels": 92237
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 42052
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 950661,
+              "confusion_matrix": [
+                [
+                  20697,
+                  0,
+                  2706,
+                  0,
+                  0,
+                  9811,
+                  0
+                ],
+                [
+                  1477,
+                  25560,
+                  5010,
+                  0,
+                  0,
+                  9700,
+                  0
+                ],
+                [
+                  17866,
+                  477,
+                  720475,
+                  48,
+                  0,
+                  2545,
+                  0
+                ],
+                [
+                  1102,
+                  0,
+                  72908,
+                  18210,
+                  0,
+                  17,
+                  0
+                ],
+                [
+                  47,
+                  0,
+                  42005,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.724
+            },
+            "combined": {
+              "pixel_accuracy": 0.8411862903811138,
+              "mean_iou": 0.37450296550766565,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.4106476274308442,
+                  "recall": 0.7584753417233696,
+                  "reference_pixels": 33214
+                },
+                "Roads": {
+                  "iou": 0.6621362441692515,
+                  "recall": 0.6698445397274055,
+                  "reference_pixels": 41747
+                },
+                "Vegetation": {
+                  "iou": 0.8405238186416567,
+                  "recall": 0.9650881899513225,
+                  "reference_pixels": 741411
+                },
+                "Water": {
+                  "iou": 0.33371010280424135,
+                  "recall": 0.3360907228118868,
+                  "reference_pixels": 92237
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 42052
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 950661,
+              "confusion_matrix": [
+                [
+                  25192,
+                  364,
+                  1517,
+                  0,
+                  0,
+                  6141,
+                  0
+                ],
+                [
+                  2802,
+                  27964,
+                  5813,
+                  0,
+                  0,
+                  5168,
+                  0
+                ],
+                [
+                  24605,
+                  105,
+                  715527,
+                  658,
+                  0,
+                  516,
+                  0
+                ],
+                [
+                  660,
+                  17,
+                  60560,
+                  31000,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  66,
+                  0,
+                  41986,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 4.747
+            }
+          }
+        },
+        {
+          "image": "3951.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 452360,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.612647094341648,
+              "mean_iou": 0.17968426410263427,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.019359221102683122,
+                  "recall": 0.01937701450443191,
+                  "reference_pixels": 79424
+                },
+                "Vegetation": {
+                  "iou": 0.6206030649336592,
+                  "recall": 0.9714595528747999,
+                  "reference_pixels": 354129
+                },
+                "Water": {
+                  "iou": 0.4381432985794634,
+                  "recall": 0.6187097786846649,
+                  "reference_pixels": 31855
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 130808
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 596216,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1539,
+                  62707,
+                  0,
+                  0,
+                  15178,
+                  0
+                ],
+                [
+                  271,
+                  0,
+                  344022,
+                  9832,
+                  0,
+                  4,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  12146,
+                  19709,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  238,
+                  73,
+                  125353,
+                  3296,
+                  0,
+                  1848,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 2.262
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.6906188361265045,
+              "mean_iou": 0.23317252556633147,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.5739773930603098,
+                  "recall": 0.5869132755842063,
+                  "reference_pixels": 79424
+                },
+                "Vegetation": {
+                  "iou": 0.6868124064970108,
+                  "recall": 0.996913554100342,
+                  "reference_pixels": 354129
+                },
+                "Water": {
+                  "iou": 0.060790178849629214,
+                  "recall": 0.061246272170773816,
+                  "reference_pixels": 31855
+                },
+                "Bare Land": {
+                  "iou": 0.07745517499103881,
+                  "recall": 0.07764051128371353,
+                  "reference_pixels": 130808
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 1832,
+              "evaluated_pixels": 596216,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  46615,
+                  12818,
+                  0,
+                  313,
+                  19678,
+                  0
+                ],
+                [
+                  116,
+                  0,
+                  353036,
+                  0,
+                  0,
+                  57,
+                  920
+                ],
+                [
+                  0,
+                  0,
+                  29904,
+                  1951,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1790,
+                  117170,
+                  239,
+                  10156,
+                  541,
+                  912
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 0.8
+            },
+            "combined": {
+              "pixel_accuracy": 0.6320209454291733,
+              "mean_iou": 0.20814485809671268,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                },
+                "Roads": {
+                  "iou": 0.06556580259222333,
+                  "recall": 0.06623942385173247,
+                  "reference_pixels": 79424
+                },
+                "Vegetation": {
+                  "iou": 0.6307687616478358,
+                  "recall": 0.9930223167263906,
+                  "reference_pixels": 354129
+                },
+                "Water": {
+                  "iou": 0.5462276306370795,
+                  "recall": 0.5988698791398525,
+                  "reference_pixels": 31855
+                },
+                "Bare Land": {
+                  "iou": 0.006306953703137423,
+                  "recall": 0.006306953703137423,
+                  "reference_pixels": 130808
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 596216,
+              "confusion_matrix": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  5261,
+                  62578,
+                  0,
+                  0,
+                  11585,
+                  0
+                ],
+                [
+                  65,
+                  0,
+                  351658,
+                  2406,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  12778,
+                  19077,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  45,
+                  816,
+                  128022,
+                  664,
+                  825,
+                  436,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 5.997
+            }
+          }
+        },
+        {
+          "image": "4190.png",
+          "total_pixels": 1048576,
+          "excluded_pixels": 310773,
+          "models": {
+            "sparsemask": {
+              "pixel_accuracy": 0.7497516274669526,
+              "mean_iou": 0.26477533128227926,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6073422377585892,
+                  "recall": 0.7080995179220463,
+                  "reference_pixels": 131514
+                },
+                "Roads": {
+                  "iou": 0.20633968532275182,
+                  "recall": 0.20977085629852008,
+                  "reference_pixels": 42637
+                },
+                "Vegetation": {
+                  "iou": 0.7749700646123345,
+                  "recall": 0.9725336322869955,
+                  "reference_pixels": 463840
+                },
+                "Water": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 8103
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 91709
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 737803,
+              "confusion_matrix": [
+                [
+                  93125,
+                  45,
+                  16239,
+                  0,
+                  0,
+                  22105,
+                  0
+                ],
+                [
+                  9978,
+                  8944,
+                  9299,
+                  0,
+                  0,
+                  14416,
+                  0
+                ],
+                [
+                  9471,
+                  618,
+                  451100,
+                  0,
+                  0,
+                  2651,
+                  0
+                ],
+                [
+                  1005,
+                  5,
+                  6993,
+                  0,
+                  0,
+                  100,
+                  0
+                ],
+                [
+                  1364,
+                  41,
+                  85716,
+                  0,
+                  0,
+                  4588,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 3.062
+            },
+            "huggingface": {
+              "pixel_accuracy": 0.7603886132206022,
+              "mean_iou": 0.29677064251310553,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6563261688455573,
+                  "recall": 0.7207141445017261,
+                  "reference_pixels": 131514
+                },
+                "Roads": {
+                  "iou": 0.23730794200389527,
+                  "recall": 0.25719445551985365,
+                  "reference_pixels": 42637
+                },
+                "Vegetation": {
+                  "iou": 0.8869897442291806,
+                  "recall": 0.9815173335632977,
+                  "reference_pixels": 463840
+                },
+                "Water": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 8103
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 91709
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 737803,
+              "confusion_matrix": [
+                [
+                  94784,
+                  13,
+                  8469,
+                  0,
+                  0,
+                  28248,
+                  0
+                ],
+                [
+                  10801,
+                  10966,
+                  2955,
+                  0,
+                  0,
+                  17915,
+                  0
+                ],
+                [
+                  2035,
+                  372,
+                  455267,
+                  0,
+                  0,
+                  6166,
+                  0
+                ],
+                [
+                  57,
+                  0,
+                  7898,
+                  0,
+                  0,
+                  148,
+                  0
+                ],
+                [
+                  9,
+                  3188,
+                  30110,
+                  0,
+                  0,
+                  58402,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 1.002
+            },
+            "combined": {
+              "pixel_accuracy": 0.7691836438724158,
+              "mean_iou": 0.2873531072884951,
+              "per_class": {
+                "Buildings": {
+                  "iou": 0.6805693684733963,
+                  "recall": 0.7492814453214106,
+                  "reference_pixels": 131514
+                },
+                "Roads": {
+                  "iou": 0.2237928621413576,
+                  "recall": 0.22501583132021483,
+                  "reference_pixels": 42637
+                },
+                "Vegetation": {
+                  "iou": 0.8197564131162168,
+                  "recall": 0.9903652121421179,
+                  "reference_pixels": 463840
+                },
+                "Water": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 8103
+                },
+                "Bare Land": {
+                  "iou": 0.0,
+                  "recall": 0.0,
+                  "reference_pixels": 91709
+                },
+                "Developed space": {
+                  "iou": 0.0,
+                  "recall": null,
+                  "reference_pixels": 0
+                }
+              },
+              "abstained_pixels": 0,
+              "evaluated_pixels": 737803,
+              "confusion_matrix": [
+                [
+                  98541,
+                  0,
+                  12021,
+                  0,
+                  0,
+                  20952,
+                  0
+                ],
+                [
+                  9738,
+                  9594,
+                  6341,
+                  0,
+                  0,
+                  16964,
+                  0
+                ],
+                [
+                  1997,
+                  133,
+                  459371,
+                  0,
+                  0,
+                  2339,
+                  0
+                ],
+                [
+                  745,
+                  3,
+                  7353,
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  798,
+                  97,
+                  70820,
+                  0,
+                  0,
+                  19994,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              ],
+              "seconds": 6.239
+            }
+          }
+        }
+      ],
+      "combined": {
+        "sparsemask": {
+          "pixel_accuracy": 0.7717311842212992,
+          "mean_iou": 0.3550053844932804,
+          "per_class": {
+            "Buildings": {
+              "iou": 0.43307980506101235,
+              "recall": 0.5721351247036336,
+              "reference_pixels": 544090
+            },
+            "Roads": {
+              "iou": 0.3097673709740569,
+              "recall": 0.31939375712896206,
+              "reference_pixels": 369093
+            },
+            "Vegetation": {
+              "iou": 0.7708268286106764,
+              "recall": 0.9450026786953436,
+              "reference_pixels": 4020614
+            },
+            "Water": {
+              "iou": 0.6163583023139368,
+              "recall": 0.6366976277564415,
+              "reference_pixels": 864203
+            },
+            "Bare Land": {
+              "iou": 0.0,
+              "recall": 0.0,
+              "reference_pixels": 394449
+            },
+            "Developed space": {
+              "iou": 0.0,
+              "recall": null,
+              "reference_pixels": 0
+            }
+          },
+          "abstained_pixels": 0,
+          "evaluated_pixels": 6192449,
+          "confusion_matrix": [
+            [
+              311293,
+              2401,
+              93576,
+              0,
+              0,
+              136820,
+              0
+            ],
+            [
+              26677,
+              117886,
+              131788,
+              1053,
+              8,
+              91681,
+              0
+            ],
+            [
+              138408,
+              6341,
+              3799491,
+              24166,
+              1430,
+              50778,
+              0
+            ],
+            [
+              3047,
+              266,
+              308109,
+              550236,
+              0,
+              2545,
+              0
+            ],
+            [
+              6567,
+              2462,
+              375024,
+              3299,
+              0,
+              7097,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "huggingface": {
+          "pixel_accuracy": 0.785440622926406,
+          "mean_iou": 0.4001086014799553,
+          "per_class": {
+            "Buildings": {
+              "iou": 0.6172587591918995,
+              "recall": 0.6777389770074804,
+              "reference_pixels": 544090
+            },
+            "Roads": {
+              "iou": 0.5156434759219881,
+              "recall": 0.5505712652366748,
+              "reference_pixels": 369093
+            },
+            "Vegetation": {
+              "iou": 0.785509707878406,
+              "recall": 0.954516399733971,
+              "reference_pixels": 4020614
+            },
+            "Water": {
+              "iou": 0.45660860576700557,
+              "recall": 0.5136987490207741,
+              "reference_pixels": 864203
+            },
+            "Bare Land": {
+              "iou": 0.025631060120432668,
+              "recall": 0.0257473082705242,
+              "reference_pixels": 394449
+            },
+            "Developed space": {
+              "iou": 0.0,
+              "recall": null,
+              "reference_pixels": 0
+            }
+          },
+          "abstained_pixels": 1832,
+          "evaluated_pixels": 6192449,
+          "confusion_matrix": [
+            [
+              368751,
+              2555,
+              65734,
+              40,
+              0,
+              107010,
+              0
+            ],
+            [
+              16588,
+              203212,
+              64315,
+              4252,
+              1644,
+              79082,
+              0
+            ],
+            [
+              34949,
+              16682,
+              3837742,
+              103518,
+              0,
+              26803,
+              920
+            ],
+            [
+              1159,
+              150,
+              417893,
+              443940,
+              145,
+              916,
+              0
+            ],
+            [
+              615,
+              5614,
+              317115,
+              242,
+              10156,
+              59795,
+              912
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "combined": {
+          "pixel_accuracy": 0.7979745977722222,
+          "mean_iou": 0.3935273779905711,
+          "per_class": {
+            "Buildings": {
+              "iou": 0.5526201024771737,
+              "recall": 0.6590986785274495,
+              "reference_pixels": 544090
+            },
+            "Roads": {
+              "iou": 0.38613109120896283,
+              "recall": 0.3951741160087024,
+              "reference_pixels": 369093
+            },
+            "Vegetation": {
+              "iou": 0.7924767775378359,
+              "recall": 0.9633023712298668,
+              "reference_pixels": 4020614
+            },
+            "Water": {
+              "iou": 0.6278447927886942,
+              "recall": 0.6515367338460987,
+              "reference_pixels": 864203
+            },
+            "Bare Land": {
+              "iou": 0.002091503930759812,
+              "recall": 0.0020915251401321844,
+              "reference_pixels": 394449
+            },
+            "Developed space": {
+              "iou": 0.0,
+              "recall": null,
+              "reference_pixels": 0
+            }
+          },
+          "abstained_pixels": 0,
+          "evaluated_pixels": 6192449,
+          "confusion_matrix": [
+            [
+              358609,
+              1610,
+              78020,
+              0,
+              0,
+              105851,
+              0
+            ],
+            [
+              20911,
+              145856,
+              121601,
+              1096,
+              0,
+              79629,
+              0
+            ],
+            [
+              80938,
+              5273,
+              3873067,
+              30843,
+              4,
+              30489,
+              0
+            ],
+            [
+              1405,
+              60,
+              298382,
+              563060,
+              0,
+              1296,
+              0
+            ],
+            [
+              1581,
+              1701,
+              368677,
+              672,
+              825,
+              20993,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
